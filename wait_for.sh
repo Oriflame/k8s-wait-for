@@ -179,7 +179,6 @@ get_job_state() {
         #   - some pods are failed, but no pod is completed yet - then emit 1
         #   - when no pod is running and at least one is completed - all is fine
         sed_reg='-e s/^[1-9][[:digit:]]*:[[:digit:]]+:[[:digit:]]+$/1/p -e s/^0:0:[[:digit:]]+$/1/p'
-    fi
     else
         # When allowing for failed jobs
         #   - pods are distributed between all 3 states with at least 1 pod running- then emit 1
